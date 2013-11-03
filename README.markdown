@@ -15,7 +15,7 @@ and print out the cards that were drawn and the best type of scoring hand it mat
 
 - For testing purposes it includes a Gemfile.  Install the needed gem (just RSpec) by running:
 
-      bundle
+        bundle
 
 - The ruby and rvm directives in the Gemfile require a recent version of bundler (like, for example, 1.3.5), but those lines could be removed without any consequences, for example if rbenv or chruby are used, or a 1.9.X ruby is preferred.
 
