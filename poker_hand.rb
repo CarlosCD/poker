@@ -53,6 +53,16 @@ class PokerHand
     when hand_is?(pair) then 'Pair'
     else 'High card'
     end
+    # Alternative implementation (same idea, maybe less clear):
+    # ---
+    # poker_hands = ['Royal Flush', 'Straight flush', 'Four of a kind', 'Full house', 'Flush',
+    #                'Straight', 'Three of a kind', 'Two Pair', 'Pair']
+    # hand_type = poker_hands.detect{ |ph| hand_is?(self.send ph.downcase.gsub(' ','_').to_sym) }
+    # hand_type || 'High card'
+    # ---
+    #  Note: this part shculd be extracted to a private method:
+    #     ph.downcase.gsub(' ','_').to_sym
+    #  It transforms the poker hand String into a snake_case symbol, i.e. 'Three of a kind' #=> :three_of_a_kind
   end
 
   # For testing purposes
