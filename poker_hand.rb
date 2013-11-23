@@ -154,8 +154,11 @@ class PokerHand
   # Utility private methods:
 
   def hand_as_string_array(hand)
-    result = hand.collect(&:to_s)    # ['d9', ..., 'hA']
-    result.collect(&:chars)           # [['d','9'], ..., ['h', 'A']]
+    result = hand.collect(&:to_s)      # ['d9', ..., 'hA']
+    result.collect{|s| s.chars.to_a}   # [['d','9'], ..., ['h', 'A']]
+    # For Ruby 2.0:
+    #   (this breaks on Ruby 1.9.3. String#chars returns an Enumerator instead of an Array)
+    # result.collect(&:chars)          # [['d','9'], ..., ['h', 'A']]
   end
 
   # '2'...'9','A','J'','Q','K','1' #=> 2,...,9,10,11,12,13,14

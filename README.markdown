@@ -24,7 +24,7 @@ and print out the cards that were drawn and the best type of scoring hand it mat
 
 ### Other notes
 
-Even if it assumes Ruby 2.0.0-p247 and I used RVM (gemset name: general), it should work well in ruby 1.9.X (I tested it also with 1.9.3-p448).
+Even if it assumes Ruby 2.0.0-p353 and I used RVM (gemset name: general), it should work well in ruby 1.9.X (I tested it also with 1.9.3-p484).
 
 After a shuffle always deals the first 5 cards of the deck.
 
